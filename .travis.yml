@@ -18,7 +18,7 @@ deploy:
   file_glob: true
   file: 'dist/*.{zip}'
   skip_cleanup: true
-  draft: true
+  #draft: true
   on:
   #  branch: release
     tags: true

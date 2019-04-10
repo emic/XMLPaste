@@ -1,6 +1,6 @@
 XMLPaste
 =========
-XMLPaste is the command line tool to paste XML text of FileMaker clipboard objects.
+XMLPaste is a command line tool to paste XML text of FileMaker clipboard objects.
 
 
 Usage
@@ -50,4 +50,4 @@ Emic Corporation <https://www.emic.co.jp/>
 
 License
 -----
-This software is distributed under MIT License.
+This software is distributed under the MIT License.

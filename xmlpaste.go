@@ -19,7 +19,7 @@ const (
 	HelpTextTemplate = `Usage: xmlpaste [-h] [-n] [-o] [-p] [-v]
 
 Description:
-    XMLPaste is the command line tool to paste XML text of
+    XMLPaste is a command line tool to paste XML text of
     FileMaker clipboard objects.
 
     The following options are available:
@@ -43,7 +43,7 @@ Author:
     Emic Corporation <https://www.emic.co.jp/>
 
 License:
-    This software is distributed under MIT License.
+    This software is distributed under the MIT License.
 `
 )
 

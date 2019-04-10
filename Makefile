@@ -1,5 +1,5 @@
 NAME=xmlpaste
-VERSION=1.0.0
+VERSION=1.0.1-dev
 
 GOCMD=go
 GOBUILD=$(GOCMD) build

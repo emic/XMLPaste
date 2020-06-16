@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<installer-gui-script minSpecVersion="1">
+    <title>XMLPaste 1.0.0</title>
+    <welcome file="welcome.txt" />
+    <license file="LICENSE.txt" />
+    <pkg-ref id="jp.co.emic.xmlpaste"/>
+    <options customize="never" require-scripts="false"/>
+    <choices-outline>
+        <line choice="default">
+            <line choice="jp.co.emic.xmlpaste"/>
+        </line>
+    </choices-outline>
+    <choice id="default"/>
+    <choice id="jp.co.emic.xmlpaste" visible="false">
+        <pkg-ref id="jp.co.emic.xmlpaste"/>
+    </choice>
+    <pkg-ref id="jp.co.emic.xmlpaste" version="1.0.0" onConclusion="none">xmlpaste.pkg</pkg-ref>
+</installer-gui-script>

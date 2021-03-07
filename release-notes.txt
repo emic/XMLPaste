@@ -2,7 +2,7 @@ XMLPaste
 (c) 2019-2021 Emic Corporation <https://www.emic.co.jp/>
 This software is distributed under the MIT License.
 
-Version: 1.0.1 (in development)
+Version: 1.1.0 (in development)
 - 
 
 Version: 1.0.0

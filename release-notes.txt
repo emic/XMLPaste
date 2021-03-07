@@ -3,6 +3,7 @@ XMLPaste
 This software is distributed under the MIT License.
 
 Version: 1.1.0 (in development)
+- Support Apple Silicon Mac.
 - Built with Go 1.16.
 
 Version: 1.0.0

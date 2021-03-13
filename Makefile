@@ -5,7 +5,7 @@ GOCMD=go
 GOBUILD=$(GOCMD) build
 DIST_DIR=dist
 MACOS_DIR=macos
-MACOS_ARM64_DIR=macos-arm64
+MACOS_ALT_DIR=macos-alt
 WINDOWS_DIR=windows-x64
 WINDOWS_32BIT_DIR=windows-x32
 DIST_MACOS_DIR=$(NAME)-$(VERSION)-$(MACOS_DIR)
@@ -20,13 +20,25 @@ clean:
 
 build: build-macos build-windows build-windows-32bit
 
+ifeq ($(shell uname -m),x86_64)
 build-macos:
 	mkdir -p $(DIST_DIR)/$(MACOS_DIR)
 	GOOS=darwin GOARCH=amd64 CGO_ENABLED=1 $(GOBUILD) -ldflags "-X main.version=$(VERSION)" -o $(DIST_DIR)/$(MACOS_DIR)/$(NAME)
+else
+build-macos:
+	mkdir -p $(DIST_DIR)/$(MACOS_DIR)
+	GOOS=darwin GOARCH=arm64 CGO_ENABLED=1 $(GOBUILD) -ldflags "-X main.version=$(VERSION)" -o $(DIST_DIR)/$(MACOS_DIR)/$(NAME)
+endif
 
-build-macos-arm64:
-	mkdir -p $(DIST_DIR)/$(MACOS_ARM64_DIR)
-	GOOS=darwin GOARCH=arm64 CGO_ENABLED=1 $(GOBUILD) -ldflags "-X main.version=$(VERSION)" -o $(DIST_DIR)/$(MACOS_ARM64_DIR)/$(NAME)
+ifeq ($(shell uname -m),x86_64)
+build-macos-alt:
+	mkdir -p $(DIST_DIR)/$(MACOS_ALT_DIR)
+	GOOS=darwin GOARCH=arm64 CGO_ENABLED=1 $(GOBUILD) -ldflags "-X main.version=$(VERSION)" -o $(DIST_DIR)/$(MACOS_ALT_DIR)/$(NAME)
+else
+build-macos-alt:
+	mkdir -p $(DIST_DIR)/$(MACOS_ALT_DIR)
+	GOOS=darwin GOARCH=amd64 CGO_ENABLED=1 $(GOBUILD) -ldflags "-X main.version=$(VERSION)" -o $(DIST_DIR)/$(MACOS_ALT_DIR)/$(NAME)
+endif
 
 build-windows:
 	mkdir -p $(DIST_DIR)/$(WINDOWS_DIR)
@@ -62,12 +74,12 @@ dist-multiplatform: build
 	cd ..
 
 ifeq ($(shell uname),Darwin)
-dist: dist-multiplatform build-macos-arm64
+dist: dist-multiplatform build-macos-alt
 	cd $(DIST_DIR) && \
 	mv $(DIST_MACOS_DIR)/$(NAME) $(DIST_MACOS_DIR)/$(NAME).tmp && \
-	lipo -create $(DIST_MACOS_DIR)/$(NAME).tmp $(MACOS_ARM64_DIR)/$(NAME) -output $(DIST_MACOS_DIR)/$(NAME) && \
-	rm -f $(MACOS_ARM64_DIR)/$(NAME) && \
-	rmdir $(MACOS_ARM64_DIR) && \
+	lipo -create $(DIST_MACOS_DIR)/$(NAME).tmp $(MACOS_ALT_DIR)/$(NAME) -output $(DIST_MACOS_DIR)/$(NAME) && \
+	rm -f $(MACOS_ALT_DIR)/$(NAME) && \
+	rmdir $(MACOS_ALT_DIR) && \
 	rm -f $(DIST_MACOS_DIR)/$(NAME).tmp && \
 	cd ..
 else

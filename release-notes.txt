@@ -6,9 +6,10 @@ Version: 1.1.0 (in development)
 - Support Apple Silicon on macOS.
 - Add suport for macOS Big Sur 11, macOS Monterey 12 and macOS Ventura 13.
 - Built with Go 1.20.
-- [INFO] Drop support for macOS Catalina 10.15 or previous.
+- [INFO] Drop support for 32-bit Windows version.
 - [INFO] Drop support for Windows 10 Version 21H2 or previous.
 - [INFO] Drop support for Windows 7.
+- [INFO] Drop support for macOS Catalina 10.15 or previous.
 
 Version: 1.0.0
 Date: April 5, 2019

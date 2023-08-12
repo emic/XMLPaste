@@ -1,0 +1,5 @@
+command:
+  version:
+    exec: "xmlpaste.exe -v"
+    exit-status: 0
+    stdout: "XMLPaste 1.1.0-dev\n"

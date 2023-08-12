@@ -11,7 +11,7 @@ jobs:
     strategy:
       matrix:
         # https://docs.github.com/ja/actions/using-github-hosted-runners/about-github-hosted-runners#supported-runners-and-hardware-resources
-        os: [ macos-11, macos-12, macos-13, macos-latest ]
+        os: [ macos-11, macos-12, macos-13, macos-latest, windows-2019, windows-2022, windows-latest ]
         go: [ '1.20' ]
     steps:
 
@@ -28,6 +28,9 @@ jobs:
     - if: runner.os == 'macOS'
       run: GOOS=darwin GOARCH=amd64 CGO_ENABLED=1 go build -ldflags "-X main.version=${{ env.xmlpaste_version }}" xmlpaste.go xmlpaste_darwin.go
 
+    - if: runner.os == 'Windows'
+      run: go build -ldflags "-X main.version=${{ env.xmlpaste_version }}" xmlpaste.go xmlpaste_windows.go
+
     - shell: bash
       run: echo "goss_commit_hash=32aae7649678efb2270b0644350ab007abe96c40" >> "$GITHUB_ENV" # v0.4.0-rc.3
 
@@ -42,9 +45,25 @@ jobs:
            make build
            cd ..
 
+    - if: runner.os == 'Windows'
+      shell: bash
+      run: |
+           curl -L "https://github.com/goss-org/goss/archive/${{ env.goss_commit_hash }}.tar.gz" -o goss.tar.gz
+           tar xzvf goss.tar.gz
+           cd "goss-${{ env.goss_commit_hash }}"
+           go build -o goss-windows-amd64.exe github.com/goss-org/goss/cmd/goss
+           mkdir release
+           mv goss-windows-amd64.exe release/
+           cd ..
+
     - if: runner.os == 'macOS'
       run: |
            "./goss-${{ env.goss_commit_hash }}/release/goss-darwin-amd64" --gossfile tests/goss.yaml validate --format documentation
+
+    - if: runner.os == 'Windows'
+      shell: bash
+      run: |
+           "./goss-${{ env.goss_commit_hash }}/release/goss-windows-amd64.exe" --gossfile tests/goss-win.yaml validate --format documentation
 
     - run: ./xmlpaste -v
 

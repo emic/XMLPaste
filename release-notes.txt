@@ -1,11 +1,12 @@
 XMLPaste
-(c) 2019-2021 Emic Corporation <https://www.emic.co.jp/>
+(c) 2019-2023 Emic Corporation <https://www.emic.co.jp/>
 This software is distributed under the MIT License.
 
 Version: 1.1.0 (in development)
-- Support Apple Silicon Mac.
-- Built with Go 1.16.
-- [INFO] Drop support for macOS High Sierra 10.13 or previous.
+- Support Apple Silicon on macOS.
+- Add suport for macOS Big Sur 11, macOS Monterey 12 and macOS Ventura 13.
+- Built with Go 1.20.
+- [INFO] Drop support for macOS Catalina 10.15 or previous.
 - [INFO] Drop support for Windows 7.
 
 Version: 1.0.0

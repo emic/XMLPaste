@@ -1,0 +1,6 @@
+command:
+  version:
+    exec: "./xmlpaste -v"
+    exit-status: 0
+    stdout:
+      - "1.1.0-dev"

@@ -26,7 +26,7 @@ jobs:
       run: echo "xmlpaste_version=1.1.0-dev" >> "$GITHUB_ENV"
 
     - if: runner.os == 'macOS'
-      run: make dist && cp -p "dist/xmlmpaste-${{ env.xmlpaste_version }}-macos/xmlmpaste" .
+      run: make dist && cp -p "dist/xmlpaste-${{ env.xmlpaste_version }}-macos/xmlpaste" .
 
     - if: runner.os == 'Windows'
       run: go build -ldflags "-X main.version=${{ env.xmlpaste_version }}" xmlpaste.go xmlpaste_windows.go

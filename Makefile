@@ -16,7 +16,7 @@ all: build
 clean:
 	@rm -rf $(DIST_DIR)
 
-build: build-macos build-windows build-windows-32bit
+build: build-macos build-windows
 
 ifeq ($(shell uname -m),x86_64)
 build-macos:

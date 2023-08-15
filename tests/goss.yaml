@@ -1,6 +1,23 @@
 command:
-  version:
+  {{if eq .Env.OS "darwin"}}
+  print-version:
     exec: "./xmlpaste -v"
     exit-status: 0
     stdout:
       - "1.1.0-dev"
+  {{end}}
+
+  {{if eq .Env.OS "windows"}}
+  print-version:
+    exec: "xmlpaste.exe -v"
+    exit-status: 0
+    stdout: "XMLPaste 1.1.0-dev\n"
+  {{end}}
+
+  {{if eq .Env.OS "darwin"}}
+  check-universal-binary-or-not:
+    exec: "file ./xmlpaste"
+    exit-status: 0
+    stdout:
+      - "Mach-O universal binary with 2 architectures: [x86_64:Mach-O 64-bit executable x86_64] [arm64]"
+  {{end}}

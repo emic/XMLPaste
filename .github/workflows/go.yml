@@ -32,7 +32,7 @@ jobs:
       run: go build -ldflags "-X main.version=${{ env.xmlpaste_version }}" xmlpaste.go xmlpaste_windows.go
 
     - shell: bash
-      run: echo "goss_commit_hash=32aae7649678efb2270b0644350ab007abe96c40" >> "$GITHUB_ENV" # v0.4.0-rc.3
+      run: echo "goss_commit_hash=7e70e27fd419534b2a208af8eea1747af5658e01" >> "$GITHUB_ENV" # v0.4.0
 
     - shell: bash
       run: echo "GOSS_USE_ALPHA=1" >> "$GITHUB_ENV"

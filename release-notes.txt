@@ -5,7 +5,7 @@ This software is distributed under the MIT License.
 Version: 1.1.0 (in development)
 - Support Apple Silicon on macOS.
 - Add support for macOS Big Sur 11, macOS Monterey 12, macOS Ventura 13 and macOS Sonoma 14.
-- Built with Go 1.20.
+- Built with Go 1.21.
 - [INFO] Drop support for 32-bit Windows version.
 - [INFO] Drop support for Windows 10 Version 21H2 or previous.
 - [INFO] Drop support for Windows 7.

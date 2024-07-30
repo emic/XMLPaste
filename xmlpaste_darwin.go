@@ -21,7 +21,8 @@ const char *paste() {
 			// dyn.ah62d4rv4gk8zuxnqm6: Layout Object (.fp7)
 			// dyn.ah62d4rv4gk8zuxnqgk: Layout Object (.fmp12)
 			// dyn.ah62d4rv4gk8zuxn0mu: Value List
-			// dyn.agk8u              : Theme
+			// dyn.agk8u              : Theme (FileMaker 17, 18, 19 and 2023)
+			// dyn.ah62d4rv4gk8zuxnyma: Theme (FileMaker 2024)
 			// public.utf16-plain-text: Custom Menu
 			NSData* data = [myPasteboard dataForType:type];
 			if (data) {

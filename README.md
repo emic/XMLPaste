@@ -35,7 +35,7 @@ set the clipboard to (xml as text)
 System Requirements
 -----
 - macOS version   : macOS Monterey 12, macOS Ventura 13 or macOS Sonoma 14
-- Windows version : Windows 10 Version 22H2
+- Windows version : Windows 10 Version 22H2 or Windows 11
 
 
 Download

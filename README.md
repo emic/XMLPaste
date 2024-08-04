@@ -38,6 +38,14 @@ System Requirements
 - Windows version : Windows 10 Version 22H2 or Windows 11
 
 
+Supported Versions
+-----
+Please see details: https://support.claris.com/s/article/Claris-support-policy?language=en_US
+- Claris FileMaker Pro 2024 (until June 2026)
+- Claris FileMaker Pro 2023 (until Apr 2025)
+- Claris FileMaker Pro 19.6 (until Dec 2024)
+
+
 Download
 -----
 Download from the [latest release page](https://github.com/emic/xmlpaste/releases/latest).

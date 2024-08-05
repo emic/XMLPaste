@@ -32,18 +32,18 @@ set the clipboard to (xml as text)
 ```
 
 
-System Requirements
------
-- macOS version   : macOS Monterey 12, macOS Ventura 13 or macOS Sonoma 14
-- Windows version : Windows 10 Version 22H2 or Windows 11
-
-
 Supported Versions
 -----
 Please see details: https://support.claris.com/s/article/Claris-support-policy?language=en_US
 - Claris FileMaker Pro 2024 (until June 2026)
 - Claris FileMaker Pro 2023 (until Apr 2025)
 - Claris FileMaker Pro 19.6 (until Dec 2024)
+
+
+System Requirements
+-----
+- macOS version   : macOS Monterey 12, macOS Ventura 13 or macOS Sonoma 14
+- Windows version : Windows 10 Version 22H2 or Windows 11
 
 
 Download

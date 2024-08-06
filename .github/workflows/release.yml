@@ -12,7 +12,8 @@ jobs:
 
     strategy:
       matrix:
-        os: [ ubuntu-latest ]
+        # https://docs.github.com/ja/actions/using-github-hosted-runners/about-github-hosted-runners/about-github-hosted-runners
+        os: [ 'macos-latest' ]
         go: [ '1.22' ]
     steps:
 

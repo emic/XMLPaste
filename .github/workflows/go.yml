@@ -1,0 +1,72 @@
+name: build
+
+on: [ push, pull_request ]
+
+jobs:
+
+  build:
+    name: Build
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        # https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners/about-github-hosted-runners
+        os: [ macos-12, macos-13, macos-14, macos-latest, windows-2019, windows-2022, windows-latest ]
+        go: [ '1.22' ]
+    steps:
+
+    - name: Setup go
+      uses: actions/setup-go@0a12ed9d6a96ab950c8f026ed9f722fe0da7ef32 # v5.0.2
+      with:
+        cache: false
+        go-version: ${{ matrix.go }}
+        check-latest: true
+
+    - uses: actions/checkout@v4
+
+    - shell: bash
+      run: echo "xmlpaste_version=1.1.0" >> "$GITHUB_ENV"
+
+    - if: runner.os == 'macOS'
+      run: make dist && cp -p "dist/xmlpaste-${{ env.xmlpaste_version }}-macos/xmlpaste" .
+
+    - if: runner.os == 'Windows'
+      run: go build -ldflags "-X main.version=${{ env.xmlpaste_version }}" xmlpaste.go xmlpaste_windows.go
+
+    - shell: bash
+      run: echo "goss_commit_hash=aed56336c3e8ff683e9540065b502f423dd6760d" >> "$GITHUB_ENV" # v0.4.8
+
+    - shell: bash
+      run: echo "GOSS_USE_ALPHA=1" >> "$GITHUB_ENV"
+
+    - if: runner.os == 'macOS'
+      run: |
+           curl -L "https://github.com/goss-org/goss/archive/${{ env.goss_commit_hash }}.tar.gz" -o goss.tar.gz
+           tar xzvf goss.tar.gz
+           cd "goss-${{ env.goss_commit_hash }}"
+           make build
+           cd ..
+
+    - if: runner.os == 'Windows'
+      shell: bash
+      run: |
+           curl -L "https://github.com/goss-org/goss/archive/${{ env.goss_commit_hash }}.tar.gz" -o goss.tar.gz
+           tar xzvf goss.tar.gz
+           cd "goss-${{ env.goss_commit_hash }}"
+           go build -o goss-windows-amd64.exe github.com/goss-org/goss/cmd/goss
+           mkdir release
+           mv goss-windows-amd64.exe release/
+           cd ..
+
+    - if: runner.os == 'macOS'
+      run: |
+           OS=darwin "./goss-${{ env.goss_commit_hash }}/release/goss-darwin-amd64" --gossfile tests/goss.yaml validate --format documentation
+
+    - if: runner.os == 'Windows'
+      shell: bash
+      run: |
+           OS=windows "./goss-${{ env.goss_commit_hash }}/release/goss-windows-amd64.exe" --gossfile tests/goss.yaml validate --format documentation
+
+    - run: ./xmlpaste -v
+
+# based on: github.com/koron-go/_skeleton/.github/workflows/go.yml

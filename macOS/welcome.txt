@@ -1,0 +1,1 @@
+XMLPaste is a command line tool to paste XML text of FileMaker clipboard objects.

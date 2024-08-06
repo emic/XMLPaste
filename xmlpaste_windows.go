@@ -49,6 +49,7 @@ func getClipboard() (string, error) {
 				"Mac-XML2": "Layout Object (.fmp12)",
 				"Mac-XMVL": "Value List",
 				"Mac-":     "Theme",
+				"Mac-XMTH": "Theme (2024)",
 			}
 			clipboardType := string((*[1 << 4]byte)(unsafe.Pointer(&buf[0]))[0 : maxCount-1])
 			if _, ex := clipboardTypes[clipboardType]; !ex && !(clipboardType[0:4] == "Mac-" && clipboardType[0:6] != "Mac-XM") {

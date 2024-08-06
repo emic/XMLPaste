@@ -2,7 +2,8 @@ XMLPaste
 (c) 2019-2024 Emic Corporation <https://www.emic.co.jp/>
 This software is distributed under the MIT License.
 
-Version: 1.1.0 (in development)
+Version: 1.1.0
+Date: August 6, 2024
 - Add support for Apple Silicon on macOS.
 - Add support for Claris FileMaker Pro 19.6, 2023 and 2024.
 - Add support for macOS Monterey 12, macOS Ventura 13 and macOS Sonoma 14.

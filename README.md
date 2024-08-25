@@ -42,7 +42,7 @@ Please see details: https://support.claris.com/s/article/Claris-support-policy?l
 
 System Requirements
 -----
-- macOS version   : macOS Monterey 12, macOS Ventura 13 or macOS Sonoma 14
+- macOS version   : macOS Ventura 13 or macOS Sonoma 14
 - Windows version : Windows 10 Version 22H2 or Windows 11
 
 

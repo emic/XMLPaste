@@ -14,7 +14,7 @@ jobs:
       matrix:
         # https://docs.github.com/ja/actions/using-github-hosted-runners/about-github-hosted-runners/about-github-hosted-runners
         os: [ 'macos-latest' ]
-        go: [ '1.22' ]
+        go: [ '1.23' ]
     steps:
 
     - name: Setup go

@@ -25,7 +25,7 @@ jobs:
     - uses: actions/checkout@v4
 
     - shell: bash
-      run: echo "xmlpaste_version=1.1.1-dev" >> "$GITHUB_ENV"
+      run: cat Makefile | grep "^VERSION=" | sed -e "s/VERSION/xmlpaste_version/g" >> "$GITHUB_ENV"
 
     - if: runner.os == 'macOS'
       run: make dist && cp -p "dist/xmlpaste-${{ env.xmlpaste_version }}-macos/xmlpaste" .

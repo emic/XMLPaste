@@ -1,4 +1,4 @@
-XMLPaste
+XMLPaste [![Build Status](https://github.com/emic/XMLPaste/actions/workflows/go.yml/badge.svg)](https://github.com/emic/XMLPaste/actions/workflows/go.yml)
 =========
 XMLPaste is a command line tool to paste XML text of FileMaker clipboard objects.
 

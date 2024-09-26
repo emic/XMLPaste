@@ -3,6 +3,7 @@ XMLPaste
 This software is distributed under the MIT License.
 
 Version: 1.1.1-dev (in development)
+- Add support for macOS Sequoia 15.
 - Built with Go 1.23.
 - [INFO] Drop support for macOS Monterey 12.
 - [INFO] Drop support for Windows 11 Version 21H2.

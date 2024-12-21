@@ -10,8 +10,8 @@ jobs:
 
     strategy:
       matrix:
-        # https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners/about-github-hosted-runners
-        os: [ 'macos-13', 'macos-14', 'macos-15', 'macos-latest', 'windows-2019', 'windows-2022', 'windows-latest' ]
+        # https://docs.github.com/en/actions/using-github-hosted-runners/using-github-hosted-runners/about-github-hosted-runners#standard-github-hosted-runners-for-public-repositories
+        os: [ 'macos-13', 'macos-14', 'macos-15', 'macos-latest', 'windows-2019', 'windows-2022', 'windows-2025', 'windows-latest' ]
     steps:
 
     - uses: actions/checkout@v4

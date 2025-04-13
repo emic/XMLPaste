@@ -24,7 +24,7 @@ jobs:
         check-latest: true
 
     - shell: bash
-      run: cat Makefile | grep "^VERSION=" | sed -e "s/VERSION/xmlpaste_version/g" >> "$GITHUB_ENV"
+      run: grep "^VERSION=" < Makefile | sed -e "s/VERSION/xmlpaste_version/g" >> "$GITHUB_ENV"
 
     - if: runner.os == 'macOS'
       run: make dist && cp -p "dist/xmlpaste-${{ env.xmlpaste_version }}-macos/xmlpaste" .

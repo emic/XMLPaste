@@ -34,9 +34,10 @@ set the clipboard to (xml as text)
 
 Supported Versions
 -----
-Please see details: https://support.claris.com/s/article/Claris-support-policy?language=en_US
-- Claris FileMaker Pro 2024 (until June 2026)
-- Claris FileMaker Pro 2023 (until Apr 2025)
+- Claris FileMaker Pro 2024
+- Claris FileMaker Pro 2023
+
+The end of support date for this software is the same as the EOL date of FileMaker Pro. See the following page for information about the EOL date of FileMaker Pro: https://support.claris.com/s/article/Claris-support-policy?language=en_US
 
 
 System Requirements

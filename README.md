@@ -34,6 +34,7 @@ set the clipboard to (xml as text)
 
 Supported Versions
 -----
+- Claris FileMaker Pro 2025
 - Claris FileMaker Pro 2024
 - Claris FileMaker Pro 2023
 

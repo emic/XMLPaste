@@ -43,7 +43,7 @@ The end of support date for this software is the same as the EOL date of FileMak
 
 System Requirements
 -----
-- macOS version   : macOS Ventura 13, macOS Sonoma 14 or macOS Sequoia 15
+- macOS version   : macOS Ventura 13, macOS Sonoma 14, macOS Sequoia 15 or macOS Tahoe 26
 - Windows version : Windows 10 Version 22H2, Windows 11 Version 22H2 or later
 
 

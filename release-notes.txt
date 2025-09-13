@@ -4,7 +4,7 @@ This software is distributed under the MIT License.
 
 Version: 1.2.0-dev (in development)
 - Add support for Claris FileMaker Pro 2025.
-- Add support for macOS Sequoia 15.
+- Add support for macOS Sequoia 15 and macOS Tahoe 26.
 - Built with Go 1.24.
 - [INFO] Drop support for Claris FileMaker Pro 19.6.
 - [INFO] Drop support for macOS Monterey 12.

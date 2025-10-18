@@ -9,7 +9,7 @@ Version: 1.2.0-dev (in development)
 - [INFO] Drop support for Claris FileMaker Pro 19.6.
 - [INFO] Drop support for macOS Monterey 12.
 - [INFO] Drop support for Windows 10.
-- [INFO] Drop support for Windows 11 Version 21H2.
+- [INFO] Drop support for Windows 11 Version 21H2 and 22H2.
 
 Version: 1.1.0
 Date: August 6, 2024

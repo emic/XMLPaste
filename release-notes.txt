@@ -7,7 +7,7 @@ Version: 1.2.0-dev (in development)
 - Add support for macOS Sequoia 15 and macOS Tahoe 26.
 - Built with Go 1.24.
 - [INFO] Drop support for Claris FileMaker Pro 19.6.
-- [INFO] Drop support for macOS Monterey 12.
+- [INFO] Drop support for macOS Monterey 12 and macOS Ventura 13.
 - [INFO] Drop support for Windows 10.
 - [INFO] Drop support for Windows 11 Version 21H2 and 22H2.
 

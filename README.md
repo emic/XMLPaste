@@ -36,7 +36,6 @@ Supported Versions
 -----
 - Claris FileMaker Pro 2025
 - Claris FileMaker Pro 2024
-- Claris FileMaker Pro 2023
 
 The end of support date for this software is the same as the EOL date of FileMaker Pro. See the following page for information about the EOL date of FileMaker Pro: https://support.claris.com/s/article/Claris-support-policy?language=en_US
 

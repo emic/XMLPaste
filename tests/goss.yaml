@@ -4,14 +4,14 @@ command:
     exec: "./xmlpaste -v"
     exit-status: 0
     stdout:
-      - "1.1.0"
+      - "1.2.0"
   {{end}}
 
   {{if eq .Env.OS "windows"}}
   print-version:
     exec: "xmlpaste.exe -v"
     exit-status: 0
-    stdout: "XMLPaste 1.1.0\n"
+    stdout: "XMLPaste 1.2.0\n"
   {{end}}
 
   {{if eq .Env.OS "darwin"}}

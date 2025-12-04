@@ -1,4 +1,4 @@
-XMLPaste
+XMLPaste [![Build Status](https://github.com/emic/XMLPaste/actions/workflows/go.yml/badge.svg)](https://github.com/emic/XMLPaste/actions/workflows/go.yml)
 =========
 XMLPaste is a command line tool to paste XML text of FileMaker clipboard objects.
 
@@ -34,16 +34,16 @@ set the clipboard to (xml as text)
 
 Supported Versions
 -----
-Please see details: https://support.claris.com/s/article/Claris-support-policy?language=en_US
-- Claris FileMaker Pro 2024 (until June 2026)
-- Claris FileMaker Pro 2023 (until Apr 2025)
-- Claris FileMaker Pro 19.6 (until Dec 2024)
+- Claris FileMaker Pro 2025
+- Claris FileMaker Pro 2024
+
+The end of support date for this software is the same as the EOL date of FileMaker Pro. See the following page for information about the EOL date of FileMaker Pro: https://support.claris.com/s/article/Claris-support-policy?language=en_US
 
 
 System Requirements
 -----
-- macOS version   : macOS Monterey 12, macOS Ventura 13 or macOS Sonoma 14
-- Windows version : Windows 10 Version 22H2 or Windows 11
+- macOS version   : macOS Sonoma 14, macOS Sequoia 15 or macOS Tahoe 26
+- Windows version : Windows 11 Version 23H2 or later
 
 
 Download

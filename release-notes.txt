@@ -2,8 +2,12 @@ XMLPaste
 (c) 2019-2025 Emic Corporation <https://www.emic.co.jp/>
 This software is distributed under the MIT License.
 
+Version: 1.2.1-dev (in development)
+Date: 
+- 
+
 Version: 1.2.0
- Date: December 4, 2025
+Date: December 4, 2025
 - Add support for Claris FileMaker Pro 2025.
 - Add support for macOS Sequoia 15 and macOS Tahoe 26.
 - Built with Go 1.25.

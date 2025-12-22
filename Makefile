@@ -49,6 +49,7 @@ dist-multiplatform: build
 	cp -p ../LICENSE.txt $(DIST_MACOS_DIR)/ && \
 	cp -p ../README.md $(DIST_MACOS_DIR)/ && \
 	cp -p ../release-notes.txt $(DIST_MACOS_DIR)/ && \
+	cp -pr ../third_party_licenses $(DIST_MACOS_DIR)/ && \
 	cd ..
 
 	cd $(DIST_DIR) && \
@@ -56,6 +57,7 @@ dist-multiplatform: build
 	cp -p ../LICENSE.txt $(DIST_WINDOWS_DIR)/ && \
 	cp -p ../README.md $(DIST_WINDOWS_DIR)/ && \
 	cp -p ../release-notes.txt $(DIST_WINDOWS_DIR)/ && \
+	cp -pr ../third_party_licenses $(DIST_WINDOWS_DIR)/ && \
 	zip -r $(DIST_WINDOWS_DIR).zip $(DIST_WINDOWS_DIR) && \
 	cd ..
 

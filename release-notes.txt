@@ -4,6 +4,7 @@ This software is distributed under the MIT License.
 
 Version: 1.2.1-dev (in development)
 - Built with Go 1.26.
+- [INFO] Drop support for Claris FileMaker Pro 2024.
 
 Version: 1.2.0
 Date: December 4, 2025
